@@ -121,6 +121,10 @@ class LineEntity(CoordinatorEntity, SensorEntity):
             departures = self._filtered_departures[:self.departure_limit]
             attrs["departures"] = [
                 {
+                    "location": self.monitor.location.title,
+                    "line_name": self.line.name,
+                    "line_icon": self._get_icon(),
+                    "towards": dep.vehicle.towards,
                     "planned_time": dep.departure_time.time_planned.strftime(TIME_STR_FORMAT),
                     "real_time": dep.departure_time.time_real.strftime(TIME_STR_FORMAT) if dep.departure_time.time_real else None,
                     "barrier_free": dep.vehicle.barrier_free,

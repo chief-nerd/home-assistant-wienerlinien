@@ -7,7 +7,7 @@
   "documentation": "https://github.com/jozefKruszynski/wienerlinien/blob/main/README.md",
   "iot_class": "cloud_polling",
   "requirements": [],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "issue_tracker": "https://github.com/jozefKruszynski/wienerlinien/issues",
   "loggers": ["custom_components.wienerlinien"]
 }
