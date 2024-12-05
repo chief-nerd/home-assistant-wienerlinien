@@ -1,0 +1,953 @@
+{
+  "data": {
+    "monitors": [
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.4213561, 48.2531752]
+          },
+          "properties": {
+            "name": "60200021",
+            "title": "Carminweg",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "attributes": {
+              "rbl": 2378
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "25",
+            "towards": "Floridsdorf S U",
+            "direction": "H",
+            "platform": "1",
+            "richtungsId": "1",
+            "barrierFree": true,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T19:56:00.000+0100",
+                    "timeReal": "2024-12-05T19:55:06.000+0100",
+                    "countdown": 1
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Floridsdorf S U",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:20:30.000+0100",
+                    "timeReal": "2024-12-05T20:20:30.000+0100",
+                    "countdown": 26
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Floridsdorf S U",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:40:30.000+0100",
+                    "timeReal": "2024-12-05T20:40:30.000+0100",
+                    "countdown": 46
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Floridsdorf S U",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:50:30.000+0100",
+                    "timeReal": "2024-12-05T20:50:30.000+0100",
+                    "countdown": 56
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Floridsdorf S U",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T21:00:30.000+0100",
+                    "timeReal": "2024-12-05T21:00:30.000+0100",
+                    "countdown": 66
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Floridsdorf S U",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                }
+              ]
+            },
+            "type": "ptTram",
+            "lineId": 125
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.3996708, 48.2571527]
+          },
+          "properties": {
+            "name": "60200334",
+            "title": "Floridsdorf S U",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "gate": "D",
+            "attributes": {
+              "rbl": 2359
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "25",
+            "towards": "Aspern, Oberdorfstraße",
+            "direction": "R",
+            "platform": "2",
+            "richtungsId": "2",
+            "barrierFree": false,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:01:30.000+0100",
+                    "timeReal": "2024-12-05T20:01:30.000+0100",
+                    "countdown": 7
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:05:30.000+0100",
+                    "timeReal": "2024-12-05T20:05:30.000+0100",
+                    "countdown": 11
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Kagran U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:09:00.000+0100",
+                    "timeReal": "2024-12-05T20:09:00.000+0100",
+                    "countdown": 15
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:39:00.000+0100",
+                    "timeReal": "2024-12-05T20:39:00.000+0100",
+                    "countdown": 45
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:49:00.000+0100",
+                    "timeReal": "2024-12-05T20:49:00.000+0100",
+                    "countdown": 55
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:59:00.000+0100",
+                    "timeReal": "2024-12-05T20:59:00.000+0100",
+                    "countdown": 65
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                }
+              ]
+            },
+            "type": "ptTram",
+            "lineId": 125
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.4207632, 48.2531453]
+          },
+          "properties": {
+            "name": "60200021",
+            "title": "Carminweg",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "attributes": {
+              "rbl": 2372
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "25",
+            "towards": "Aspern, Oberdorfstraße",
+            "direction": "R",
+            "platform": "2",
+            "richtungsId": "2",
+            "barrierFree": false,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:07:30.000+0100",
+                    "timeReal": "2024-12-05T20:07:30.000+0100",
+                    "countdown": 13
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:11:30.000+0100",
+                    "timeReal": "2024-12-05T20:11:30.000+0100",
+                    "countdown": 17
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Kagran U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:15:00.000+0100",
+                    "timeReal": "2024-12-05T20:15:00.000+0100",
+                    "countdown": 21
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:45:00.000+0100",
+                    "timeReal": "2024-12-05T20:45:00.000+0100",
+                    "countdown": 51
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:55:00.000+0100",
+                    "timeReal": "2024-12-05T20:55:00.000+0100",
+                    "countdown": 61
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                }
+              ]
+            },
+            "type": "ptTram",
+            "lineId": 125
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.4213561, 48.2531752]
+          },
+          "properties": {
+            "name": "60200021",
+            "title": "Carminweg",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "attributes": {
+              "rbl": 2378
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "26",
+            "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+            "direction": "H",
+            "platform": "1",
+            "richtungsId": "1",
+            "barrierFree": false,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:00:00.000+0100",
+                    "timeReal": "2024-12-05T20:00:41.000+0100",
+                    "countdown": 6
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:07:30.000+0100",
+                    "timeReal": "2024-12-05T20:07:12.000+0100",
+                    "countdown": 13
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:15:30.000+0100",
+                    "timeReal": "2024-12-05T20:15:30.000+0100",
+                    "countdown": 21
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:20:30.000+0100",
+                    "timeReal": "2024-12-05T20:20:30.000+0100",
+                    "countdown": 26
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Floridsdorfer Markt, Betriebsbhf. Floridsdorf",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:25:30.000+0100",
+                    "timeReal": "2024-12-05T20:25:30.000+0100",
+                    "countdown": 31
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:35:30.000+0100",
+                    "timeReal": "2024-12-05T20:35:30.000+0100",
+                    "countdown": 41
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:45:30.000+0100",
+                    "timeReal": "2024-12-05T20:45:30.000+0100",
+                    "countdown": 51
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:55:30.000+0100",
+                    "timeReal": "2024-12-05T20:55:30.000+0100",
+                    "countdown": 61
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                }
+              ]
+            },
+            "type": "ptTram",
+            "lineId": 126
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.4207632, 48.2531453]
+          },
+          "properties": {
+            "name": "60200021",
+            "title": "Carminweg",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "attributes": {
+              "rbl": 2372
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "26",
+            "towards": "Hausfeldstraße U",
+            "direction": "R",
+            "platform": "2",
+            "richtungsId": "2",
+            "barrierFree": false,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T19:56:30.000+0100",
+                    "timeReal": "2024-12-05T19:57:02.000+0100",
+                    "countdown": 3
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:04:00.000+0100",
+                    "timeReal": "2024-12-05T20:04:40.000+0100",
+                    "countdown": 10
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:11:30.000+0100",
+                    "timeReal": "2024-12-05T20:10:46.000+0100",
+                    "countdown": 17
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:30:00.000+0100",
+                    "timeReal": "2024-12-05T20:30:00.000+0100",
+                    "countdown": 36
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:40:00.000+0100",
+                    "timeReal": "2024-12-05T20:40:00.000+0100",
+                    "countdown": 46
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:46:00.000+0100",
+                    "timeReal": "2024-12-05T20:46:00.000+0100",
+                    "countdown": 52
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Kagran U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T20:50:00.000+0100",
+                    "timeReal": "2024-12-05T20:50:00.000+0100",
+                    "countdown": 56
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-05T21:00:00.000+0100",
+                    "timeReal": "2024-12-05T21:00:00.000+0100",
+                    "countdown": 66
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                }
+              ]
+            },
+            "type": "ptTram",
+            "lineId": 126
+          }
+        ],
+        "attributes": {
+
+        }
+      }
+    ]
+  },
+  "message": {
+    "value": "OK",
+    "messageCode": 1,
+    "serverTime": "2024-12-05T19:53:44.000+0100"
+  }
+}
