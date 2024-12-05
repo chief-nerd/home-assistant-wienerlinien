@@ -4,12 +4,11 @@
   "codeowners": ["@jozefKruszynski"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://www.home-assistant.io/integrations/wienerlinien",
+  "documentation": "https://github.com/jozefKruszynski/wienerlinien/blob/main/README.md",
   "homekit": {},
   "iot_class": "cloud_polling",
   "quality_scale": "bronze",
   "requirements": [],
-  "ssdp": [],
-  "zeroconf": [],
-  "loggers": ["homeassistant.components.wienerlinien"]
+  "version": "0.0.1",
+  "loggers": ["custom_components.wienerlinien"]
 }
