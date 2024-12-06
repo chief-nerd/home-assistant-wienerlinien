@@ -10,7 +10,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import DOMAIN, TIME_STR_FORMAT, DEFAULT_DEPARTURE_LIMIT
+from .const import DOMAIN, ENTITY_PREFIX, TIME_STR_FORMAT, DEFAULT_DEPARTURE_LIMIT
 from .entity import Line, Monitor
 
 _LOGGER = logging.getLogger(__name__)
@@ -32,7 +32,7 @@ class LineEntity(CoordinatorEntity, SensorEntity):
         self._cached_departures = None
         
         self._attr_unique_id = (
-            f"line_{monitor.location.title}_{monitor.location.rbl}_"
+            f"{ENTITY_PREFIX}line_{monitor.location.title}_{monitor.location.rbl}_"
             f"{line.line_id}_{direction}_{unique_id_suffix}"
         )
         self._attr_name = (
