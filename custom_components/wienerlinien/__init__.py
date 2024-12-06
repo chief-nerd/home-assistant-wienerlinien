@@ -17,14 +17,15 @@ from .const import DOMAIN, BASE_URL
 from .entity import Monitor
 
 _LOGGER = logging.getLogger(__name__)
-PLATFORMS = [Platform.SENSOR] 
-SCAN_INTERVAL = timedelta(seconds=30)
+PLATFORMS = [Platform.SENSOR]
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Wiener Linien from a config entry."""
     stops = entry.data["stops"]
     session = async_create_clientsession(hass)
     api = WienerLinienAPI(session, stops)
+    scan_interval = timedelta(seconds=entry.data.get("scan_interval", 30))
+
 
     async def async_update_data() -> list[Monitor]:
         """Fetch data from API."""
@@ -59,7 +60,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         _LOGGER,
         name=DOMAIN,
         update_method=async_update_data,
-        update_interval=SCAN_INTERVAL,
+        update_interval=scan_interval,
     )
 
     try:
