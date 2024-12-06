@@ -192,13 +192,26 @@ async def parse_api_response(response: dict[str, Any]) -> list[Monitor]:
             return []
             
         monitors_data = response["data"]["monitors"]
-        monitors = [Monitor.from_dict(m) for m in monitors_data]
+        _LOGGER.debug("Parsing %d monitors", len(monitors_data))
         
-        _LOGGER.debug(
-            "Parsed %d monitors",
-            len(monitors)
-        )
-        
+        # Create Monitor objects directly from data
+        monitors = []
+        for monitor_data in monitors_data:
+            try:
+                monitor = Monitor.from_dict(monitor_data)
+                monitors.append(monitor)
+                _LOGGER.debug(
+                    "Parsed monitor: location=%s, rbl=%s, lines=%d",
+                    monitor.location.title,
+                    monitor.location.rbl,
+                    len(monitor.lines)
+                )
+            except Exception as ex:
+                _LOGGER.error(
+                    "Failed to parse monitor: %s",
+                    ex
+                )
+                
         return monitors
         
     except Exception as ex:

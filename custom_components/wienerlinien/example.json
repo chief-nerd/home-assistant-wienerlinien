@@ -34,9 +34,9 @@
               "departure": [
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T19:56:00.000+0100",
-                    "timeReal": "2024-12-05T19:55:06.000+0100",
-                    "countdown": 1
+                    "timePlanned": "2024-12-06T22:34:30.000+0100",
+                    "timeReal": "2024-12-06T22:34:55.000+0100",
+                    "countdown": 7
                   },
                   "vehicle": {
                     "name": "25",
@@ -57,9 +57,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:20:30.000+0100",
-                    "timeReal": "2024-12-05T20:20:30.000+0100",
-                    "countdown": 26
+                    "timePlanned": "2024-12-06T22:49:30.000+0100",
+                    "timeReal": "2024-12-06T22:49:25.000+0100",
+                    "countdown": 21
                   },
                   "vehicle": {
                     "name": "25",
@@ -80,9 +80,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:40:30.000+0100",
-                    "timeReal": "2024-12-05T20:40:30.000+0100",
-                    "countdown": 46
+                    "timePlanned": "2024-12-06T23:04:30.000+0100",
+                    "timeReal": "2024-12-06T23:04:30.000+0100",
+                    "countdown": 36
                   },
                   "vehicle": {
                     "name": "25",
@@ -103,9 +103,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:50:30.000+0100",
-                    "timeReal": "2024-12-05T20:50:30.000+0100",
-                    "countdown": 56
+                    "timePlanned": "2024-12-06T23:19:30.000+0100",
+                    "timeReal": "2024-12-06T23:19:30.000+0100",
+                    "countdown": 51
                   },
                   "vehicle": {
                     "name": "25",
@@ -126,8 +126,8 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T21:00:30.000+0100",
-                    "timeReal": "2024-12-05T21:00:30.000+0100",
+                    "timePlanned": "2024-12-06T23:34:30.000+0100",
+                    "timeReal": "2024-12-06T23:34:30.000+0100",
                     "countdown": 66
                   },
                   "vehicle": {
@@ -137,6 +137,184 @@
                     "platform": "1",
                     "richtungsId": "1",
                     "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                }
+              ]
+            },
+            "type": "ptTram",
+            "lineId": 125
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.4207632, 48.2531453]
+          },
+          "properties": {
+            "name": "60200021",
+            "title": "Carminweg",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "attributes": {
+              "rbl": 2372
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "25",
+            "towards": "Kagran U",
+            "direction": "R",
+            "platform": "2",
+            "richtungsId": "2",
+            "barrierFree": true,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:29:00.000+0100",
+                    "timeReal": "2024-12-06T22:28:57.000+0100",
+                    "countdown": 1
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Kagran U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:37:30.000+0100",
+                    "timeReal": "2024-12-06T22:37:30.000+0100",
+                    "countdown": 9
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:52:30.000+0100",
+                    "timeReal": "2024-12-06T22:52:30.000+0100",
+                    "countdown": 24
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:07:30.000+0100",
+                    "timeReal": "2024-12-06T23:07:30.000+0100",
+                    "countdown": 39
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:22:30.000+0100",
+                    "timeReal": "2024-12-06T23:22:30.000+0100",
+                    "countdown": 54
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:37:30.000+0100",
+                    "countdown": 69
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": false,
                     "foldingRamp": false,
                     "realtimeSupported": true,
                     "trafficjam": false,
@@ -184,16 +362,16 @@
             "direction": "R",
             "platform": "2",
             "richtungsId": "2",
-            "barrierFree": false,
+            "barrierFree": true,
             "realtimeSupported": true,
             "trafficjam": false,
             "departures": {
               "departure": [
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:01:30.000+0100",
-                    "timeReal": "2024-12-05T20:01:30.000+0100",
-                    "countdown": 7
+                    "timePlanned": "2024-12-06T22:31:30.000+0100",
+                    "timeReal": "2024-12-06T22:31:30.000+0100",
+                    "countdown": 3
                   },
                   "vehicle": {
                     "name": "25",
@@ -214,32 +392,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:05:30.000+0100",
-                    "timeReal": "2024-12-05T20:05:30.000+0100",
-                    "countdown": 11
-                  },
-                  "vehicle": {
-                    "name": "25",
-                    "towards": "Kagran U",
-                    "direction": "R",
-                    "platform": "2",
-                    "richtungsId": "2",
-                    "barrierFree": false,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 125
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:09:00.000+0100",
-                    "timeReal": "2024-12-05T20:09:00.000+0100",
-                    "countdown": 15
+                    "timePlanned": "2024-12-06T22:46:30.000+0100",
+                    "timeReal": "2024-12-06T22:46:30.000+0100",
+                    "countdown": 18
                   },
                   "vehicle": {
                     "name": "25",
@@ -260,9 +415,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:39:00.000+0100",
-                    "timeReal": "2024-12-05T20:39:00.000+0100",
-                    "countdown": 45
+                    "timePlanned": "2024-12-06T23:01:30.000+0100",
+                    "timeReal": "2024-12-06T23:01:30.000+0100",
+                    "countdown": 33
                   },
                   "vehicle": {
                     "name": "25",
@@ -283,9 +438,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:49:00.000+0100",
-                    "timeReal": "2024-12-05T20:49:00.000+0100",
-                    "countdown": 55
+                    "timePlanned": "2024-12-06T23:16:30.000+0100",
+                    "timeReal": "2024-12-06T23:16:30.000+0100",
+                    "countdown": 48
                   },
                   "vehicle": {
                     "name": "25",
@@ -306,9 +461,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:59:00.000+0100",
-                    "timeReal": "2024-12-05T20:59:00.000+0100",
-                    "countdown": 65
+                    "timePlanned": "2024-12-06T23:31:30.000+0100",
+                    "timeReal": "2024-12-06T23:31:30.000+0100",
+                    "countdown": 63
                   },
                   "vehicle": {
                     "name": "25",
@@ -342,17 +497,18 @@
           "type": "Feature",
           "geometry": {
             "type": "Point",
-            "coordinates": [16.4207632, 48.2531453]
+            "coordinates": [16.400596, 48.2572065]
           },
           "properties": {
-            "name": "60200021",
-            "title": "Carminweg",
+            "name": "60200334",
+            "title": "Floridsdorf S U",
             "municipality": "Wien",
             "municipalityId": 49000001,
             "type": "stop",
             "coordName": "WGS84",
+            "gate": "B",
             "attributes": {
-              "rbl": 2372
+              "rbl": 2343
             }
           }
         },
@@ -363,16 +519,16 @@
             "direction": "R",
             "platform": "2",
             "richtungsId": "2",
-            "barrierFree": false,
+            "barrierFree": true,
             "realtimeSupported": true,
             "trafficjam": false,
             "departures": {
               "departure": [
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:07:30.000+0100",
-                    "timeReal": "2024-12-05T20:07:30.000+0100",
-                    "countdown": 13
+                    "timePlanned": "2024-12-06T22:32:30.000+0100",
+                    "timeReal": "2024-12-06T22:32:30.000+0100",
+                    "countdown": 4
                   },
                   "vehicle": {
                     "name": "25",
@@ -393,32 +549,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:11:30.000+0100",
-                    "timeReal": "2024-12-05T20:11:30.000+0100",
-                    "countdown": 17
-                  },
-                  "vehicle": {
-                    "name": "25",
-                    "towards": "Kagran U",
-                    "direction": "R",
-                    "platform": "2",
-                    "richtungsId": "2",
-                    "barrierFree": false,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 125
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:15:00.000+0100",
-                    "timeReal": "2024-12-05T20:15:00.000+0100",
-                    "countdown": 21
+                    "timePlanned": "2024-12-06T22:47:30.000+0100",
+                    "timeReal": "2024-12-06T22:47:30.000+0100",
+                    "countdown": 19
                   },
                   "vehicle": {
                     "name": "25",
@@ -439,9 +572,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:45:00.000+0100",
-                    "timeReal": "2024-12-05T20:45:00.000+0100",
-                    "countdown": 51
+                    "timePlanned": "2024-12-06T23:02:30.000+0100",
+                    "timeReal": "2024-12-06T23:02:30.000+0100",
+                    "countdown": 34
                   },
                   "vehicle": {
                     "name": "25",
@@ -462,9 +595,32 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:55:00.000+0100",
-                    "timeReal": "2024-12-05T20:55:00.000+0100",
-                    "countdown": 61
+                    "timePlanned": "2024-12-06T23:17:30.000+0100",
+                    "timeReal": "2024-12-06T23:17:30.000+0100",
+                    "countdown": 49
+                  },
+                  "vehicle": {
+                    "name": "25",
+                    "towards": "Aspern, Oberdorfstraße",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 125
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:32:30.000+0100",
+                    "timeReal": "2024-12-06T23:32:30.000+0100",
+                    "countdown": 64
                   },
                   "vehicle": {
                     "name": "25",
@@ -519,39 +675,16 @@
             "direction": "H",
             "platform": "1",
             "richtungsId": "1",
-            "barrierFree": false,
+            "barrierFree": true,
             "realtimeSupported": true,
             "trafficjam": false,
             "departures": {
               "departure": [
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:00:00.000+0100",
-                    "timeReal": "2024-12-05T20:00:41.000+0100",
-                    "countdown": 6
-                  },
-                  "vehicle": {
-                    "name": "26",
-                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
-                    "direction": "H",
-                    "platform": "1",
-                    "richtungsId": "1",
-                    "barrierFree": false,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 126
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:07:30.000+0100",
-                    "timeReal": "2024-12-05T20:07:12.000+0100",
-                    "countdown": 13
+                    "timePlanned": "2024-12-06T22:27:00.000+0100",
+                    "timeReal": "2024-12-06T22:28:49.000+0100",
+                    "countdown": 1
                   },
                   "vehicle": {
                     "name": "26",
@@ -572,9 +705,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:15:30.000+0100",
-                    "timeReal": "2024-12-05T20:15:30.000+0100",
-                    "countdown": 21
+                    "timePlanned": "2024-12-06T22:42:00.000+0100",
+                    "timeReal": "2024-12-06T22:41:54.000+0100",
+                    "countdown": 14
                   },
                   "vehicle": {
                     "name": "26",
@@ -595,32 +728,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:20:30.000+0100",
-                    "timeReal": "2024-12-05T20:20:30.000+0100",
-                    "countdown": 26
-                  },
-                  "vehicle": {
-                    "name": "26",
-                    "towards": "Floridsdorfer Markt, Betriebsbhf. Floridsdorf",
-                    "direction": "H",
-                    "platform": "1",
-                    "richtungsId": "1",
-                    "barrierFree": false,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 126
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:25:30.000+0100",
-                    "timeReal": "2024-12-05T20:25:30.000+0100",
-                    "countdown": 31
+                    "timePlanned": "2024-12-06T22:57:00.000+0100",
+                    "timeReal": "2024-12-06T22:57:00.000+0100",
+                    "countdown": 29
                   },
                   "vehicle": {
                     "name": "26",
@@ -641,9 +751,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:35:30.000+0100",
-                    "timeReal": "2024-12-05T20:35:30.000+0100",
-                    "countdown": 41
+                    "timePlanned": "2024-12-06T23:12:00.000+0100",
+                    "timeReal": "2024-12-06T23:12:00.000+0100",
+                    "countdown": 44
                   },
                   "vehicle": {
                     "name": "26",
@@ -664,32 +774,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:45:30.000+0100",
-                    "timeReal": "2024-12-05T20:45:30.000+0100",
-                    "countdown": 51
-                  },
-                  "vehicle": {
-                    "name": "26",
-                    "towards": "Strebersdorf, Edmund-Hawranek-Platz",
-                    "direction": "H",
-                    "platform": "1",
-                    "richtungsId": "1",
-                    "barrierFree": true,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 126
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:55:30.000+0100",
-                    "timeReal": "2024-12-05T20:55:30.000+0100",
-                    "countdown": 61
+                    "timePlanned": "2024-12-06T23:27:00.000+0100",
+                    "timeReal": "2024-12-06T23:27:00.000+0100",
+                    "countdown": 59
                   },
                   "vehicle": {
                     "name": "26",
@@ -744,39 +831,16 @@
             "direction": "R",
             "platform": "2",
             "richtungsId": "2",
-            "barrierFree": false,
+            "barrierFree": true,
             "realtimeSupported": true,
             "trafficjam": false,
             "departures": {
               "departure": [
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T19:56:30.000+0100",
-                    "timeReal": "2024-12-05T19:57:02.000+0100",
+                    "timePlanned": "2024-12-06T22:30:00.000+0100",
+                    "timeReal": "2024-12-06T22:31:11.000+0100",
                     "countdown": 3
-                  },
-                  "vehicle": {
-                    "name": "26",
-                    "towards": "Hausfeldstraße U",
-                    "direction": "R",
-                    "platform": "2",
-                    "richtungsId": "2",
-                    "barrierFree": false,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 126
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:04:00.000+0100",
-                    "timeReal": "2024-12-05T20:04:40.000+0100",
-                    "countdown": 10
                   },
                   "vehicle": {
                     "name": "26",
@@ -797,8 +861,8 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:11:30.000+0100",
-                    "timeReal": "2024-12-05T20:10:46.000+0100",
+                    "timePlanned": "2024-12-06T22:45:00.000+0100",
+                    "timeReal": "2024-12-06T22:45:00.000+0100",
                     "countdown": 17
                   },
                   "vehicle": {
@@ -820,55 +884,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:30:00.000+0100",
-                    "timeReal": "2024-12-05T20:30:00.000+0100",
-                    "countdown": 36
-                  },
-                  "vehicle": {
-                    "name": "26",
-                    "towards": "Hausfeldstraße U",
-                    "direction": "R",
-                    "platform": "2",
-                    "richtungsId": "2",
-                    "barrierFree": true,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 126
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:40:00.000+0100",
-                    "timeReal": "2024-12-05T20:40:00.000+0100",
-                    "countdown": 46
-                  },
-                  "vehicle": {
-                    "name": "26",
-                    "towards": "Hausfeldstraße U",
-                    "direction": "R",
-                    "platform": "2",
-                    "richtungsId": "2",
-                    "barrierFree": false,
-                    "foldingRamp": false,
-                    "realtimeSupported": true,
-                    "trafficjam": false,
-                    "type": "ptTram",
-                    "attributes": {
-
-                    },
-                    "linienId": 126
-                  }
-                },
-                {
-                  "departureTime": {
-                    "timePlanned": "2024-12-05T20:46:00.000+0100",
-                    "timeReal": "2024-12-05T20:46:00.000+0100",
-                    "countdown": 52
+                    "timePlanned": "2024-12-06T22:52:30.000+0100",
+                    "timeReal": "2024-12-06T22:52:30.000+0100",
+                    "countdown": 24
                   },
                   "vehicle": {
                     "name": "26",
@@ -889,9 +907,9 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T20:50:00.000+0100",
-                    "timeReal": "2024-12-05T20:50:00.000+0100",
-                    "countdown": 56
+                    "timePlanned": "2024-12-06T23:00:00.000+0100",
+                    "timeReal": "2024-12-06T23:00:00.000+0100",
+                    "countdown": 32
                   },
                   "vehicle": {
                     "name": "26",
@@ -912,9 +930,32 @@
                 },
                 {
                   "departureTime": {
-                    "timePlanned": "2024-12-05T21:00:00.000+0100",
-                    "timeReal": "2024-12-05T21:00:00.000+0100",
-                    "countdown": 66
+                    "timePlanned": "2024-12-06T23:15:00.000+0100",
+                    "timeReal": "2024-12-06T23:15:00.000+0100",
+                    "countdown": 47
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:30:00.000+0100",
+                    "timeReal": "2024-12-06T23:30:00.000+0100",
+                    "countdown": 62
                   },
                   "vehicle": {
                     "name": "26",
@@ -942,12 +983,715 @@
         "attributes": {
 
         }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.400596, 48.2572065]
+          },
+          "properties": {
+            "name": "60200334",
+            "title": "Floridsdorf S U",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "gate": "B",
+            "attributes": {
+              "rbl": 2343
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "26",
+            "towards": "Hausfeldstraße U",
+            "direction": "R",
+            "platform": "2",
+            "richtungsId": "2",
+            "barrierFree": true,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:40:00.000+0100",
+                    "timeReal": "2024-12-06T22:40:00.000+0100",
+                    "countdown": 12
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:47:30.000+0100",
+                    "timeReal": "2024-12-06T22:47:30.000+0100",
+                    "countdown": 19
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Kagran U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": false,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:55:00.000+0100",
+                    "timeReal": "2024-12-06T22:55:00.000+0100",
+                    "countdown": 27
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:10:00.000+0100",
+                    "timeReal": "2024-12-06T23:10:00.000+0100",
+                    "countdown": 42
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:25:00.000+0100",
+                    "timeReal": "2024-12-06T23:25:00.000+0100",
+                    "countdown": 57
+                  },
+                  "vehicle": {
+                    "name": "26",
+                    "towards": "Hausfeldstraße U",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptTram",
+                    "attributes": {
+
+                    },
+                    "linienId": 126
+                  }
+                }
+              ]
+            },
+            "type": "ptTram",
+            "lineId": 126
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.400596, 48.2572065]
+          },
+          "properties": {
+            "name": "60200334",
+            "title": "Floridsdorf S U",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "gate": "B",
+            "attributes": {
+              "rbl": 2343
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "29A",
+            "towards": "Großfeldsiedlung U (üb. Leopoldauer Pl.)",
+            "direction": "H",
+            "platform": "1",
+            "richtungsId": "1",
+            "barrierFree": true,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:28:00.000+0100",
+                    "timeReal": "2024-12-06T22:27:34.000+0100",
+                    "countdown": 0
+                  },
+                  "vehicle": {
+                    "name": "29A",
+                    "towards": "Großfeldsiedlung U (üb. Leopoldauer Pl.)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 429
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:43:00.000+0100",
+                    "timeReal": "2024-12-06T22:43:00.000+0100",
+                    "countdown": 15
+                  },
+                  "vehicle": {
+                    "name": "29A",
+                    "towards": "Großfeldsiedlung U (üb. Leopoldauer Pl.)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 429
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:58:00.000+0100",
+                    "timeReal": "2024-12-06T22:58:00.000+0100",
+                    "countdown": 30
+                  },
+                  "vehicle": {
+                    "name": "29A",
+                    "towards": "Großfeldsiedlung U (üb. Leopoldauer Pl.)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 429
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:13:00.000+0100",
+                    "timeReal": "2024-12-06T23:13:00.000+0100",
+                    "countdown": 45
+                  },
+                  "vehicle": {
+                    "name": "29A",
+                    "towards": "Großfeldsiedlung U (üb. Leopoldauer Pl.)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 429
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:28:00.000+0100",
+                    "timeReal": "2024-12-06T23:28:00.000+0100",
+                    "countdown": 60
+                  },
+                  "vehicle": {
+                    "name": "29A",
+                    "towards": "Großfeldsiedlung U (üb. Leopoldauer Pl.)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 429
+                  }
+                }
+              ]
+            },
+            "type": "ptBusCity",
+            "lineId": 429
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.400596, 48.2572065]
+          },
+          "properties": {
+            "name": "60200334",
+            "title": "Floridsdorf S U",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "gate": "B",
+            "attributes": {
+              "rbl": 2343
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "29B",
+            "towards": "Großfeldsiedlung U (über Leopoldau S U)",
+            "direction": "H",
+            "platform": "1",
+            "richtungsId": "1",
+            "barrierFree": true,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:35:30.000+0100",
+                    "timeReal": "2024-12-06T22:35:30.000+0100",
+                    "countdown": 7
+                  },
+                  "vehicle": {
+                    "name": "29B",
+                    "towards": "Großfeldsiedlung U (über Leopoldau S U)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 229
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:50:30.000+0100",
+                    "timeReal": "2024-12-06T22:50:30.000+0100",
+                    "countdown": 22
+                  },
+                  "vehicle": {
+                    "name": "29B",
+                    "towards": "Großfeldsiedlung U (über Leopoldau S U)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 229
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:05:30.000+0100",
+                    "timeReal": "2024-12-06T23:05:30.000+0100",
+                    "countdown": 37
+                  },
+                  "vehicle": {
+                    "name": "29B",
+                    "towards": "Großfeldsiedlung U (über Leopoldau S U)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 229
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:20:30.000+0100",
+                    "timeReal": "2024-12-06T23:20:30.000+0100",
+                    "countdown": 52
+                  },
+                  "vehicle": {
+                    "name": "29B",
+                    "towards": "Großfeldsiedlung U (über Leopoldau S U)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 229
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:35:30.000+0100",
+                    "timeReal": "2024-12-06T23:35:30.000+0100",
+                    "countdown": 67
+                  },
+                  "vehicle": {
+                    "name": "29B",
+                    "towards": "Großfeldsiedlung U (über Leopoldau S U)",
+                    "direction": "H",
+                    "platform": "1",
+                    "richtungsId": "1",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptBusCity",
+                    "attributes": {
+
+                    },
+                    "linienId": 229
+                  }
+                }
+              ]
+            },
+            "type": "ptBusCity",
+            "lineId": 229
+          }
+        ],
+        "attributes": {
+
+        }
+      },
+      {
+        "locationStop": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [16.4004074, 48.2562196]
+          },
+          "properties": {
+            "name": "60200334",
+            "title": "Floridsdorf",
+            "municipality": "Wien",
+            "municipalityId": 49000001,
+            "type": "stop",
+            "coordName": "WGS84",
+            "gate": "2",
+            "attributes": {
+              "rbl": 4646
+            }
+          }
+        },
+        "lines": [
+          {
+            "name": "U6",
+            "towards": "SIEBENHIRTEN",
+            "direction": "R",
+            "platform": "2",
+            "richtungsId": "2",
+            "barrierFree": true,
+            "realtimeSupported": true,
+            "trafficjam": false,
+            "departures": {
+              "departure": [
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:27:29.000+0100",
+                    "timeReal": "2024-12-06T22:27:29.000+0100",
+                    "countdown": 0
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:35:29.000+0100",
+                    "timeReal": "2024-12-06T22:35:29.000+0100",
+                    "countdown": 8
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:42:30.000+0100",
+                    "countdown": 14
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:50:00.000+0100",
+                    "countdown": 22
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T22:57:30.000+0100",
+                    "countdown": 29
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:05:00.000+0100",
+                    "countdown": 37
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:12:30.000+0100",
+                    "countdown": 44
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:20:00.000+0100",
+                    "countdown": 52
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:27:30.000+0100",
+                    "countdown": 59
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                },
+                {
+                  "departureTime": {
+                    "timePlanned": "2024-12-06T23:35:00.000+0100",
+                    "countdown": 67
+                  },
+                  "vehicle": {
+                    "name": "U6",
+                    "towards": "Siebenhirten",
+                    "direction": "R",
+                    "platform": "2",
+                    "richtungsId": "2",
+                    "barrierFree": true,
+                    "foldingRamp": false,
+                    "realtimeSupported": true,
+                    "trafficjam": false,
+                    "type": "ptMetro",
+                    "attributes": {
+
+                    },
+                    "linienId": 306
+                  }
+                }
+              ]
+            },
+            "type": "ptMetro",
+            "lineId": 306
+          }
+        ],
+        "attributes": {
+
+        }
       }
     ]
   },
   "message": {
     "value": "OK",
     "messageCode": 1,
-    "serverTime": "2024-12-05T19:53:44.000+0100"
+    "serverTime": "2024-12-06T22:27:37.000+0100"
   }
 }

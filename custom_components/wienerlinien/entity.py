@@ -3,13 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Optional
+import logging
 
-from homeassistant.const import ATTR_LATITUDE, ATTR_LONGITUDE
 from homeassistant.components.sensor import SensorEntity, SensorDeviceClass
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity import DeviceInfo, Entity, EntityDescription
 from homeassistant.const import ATTR_LATITUDE, ATTR_LONGITUDE
 from .const import DOMAIN
+
+_LOGGER = logging.getLogger(__name__)
+
 
 # Pure Data Models
 @dataclass
@@ -74,19 +77,49 @@ class Vehicle:
     traffic_jam: bool
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> Vehicle:
+    def from_dict(cls, data: dict[str, Any], location_data: dict[str, Any] | None = None) -> Vehicle:
         """Create vehicle from API response."""
+        # Handle both linienId and lineId
+        line_id = data.get("linienId", data.get("lineId"))
+        if line_id is None:
+            _LOGGER.error("No line ID found in data: %s", data)
+            raise ValueError("Missing line ID")
+            
         return cls(
             name=data["name"],
             towards=data["towards"],
             direction=data["direction"],
             platform=data["platform"],
             barrier_free=data["barrierFree"],
-            line_id=data["linienId"],
+            line_id=line_id,
             vehicle_type=data["type"],
-            realtime_supported=data["realtimeSupported"],
-            traffic_jam=data["trafficjam"]
+            realtime_supported=data.get("realtimeSupported", False),
+            traffic_jam=data.get("trafficjam", False)
         )
+
+@dataclass
+class Departure:
+    """Departure information."""
+    departure_time: DepartureTime
+    vehicle: Vehicle
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any], vehicle_info: Vehicle | None = None) -> "Departure":
+        """Create departure from API response.
+        
+        For metro lines, one vehicle can have multiple departure times.
+        The vehicle info is passed separately in these cases.
+        """
+        departure_time = DepartureTime.from_dict(data["departureTime"])
+        
+        # Use provided vehicle info or parse from data
+        vehicle = vehicle_info or Vehicle.from_dict(data["vehicle"])
+            
+        return cls(
+            departure_time=departure_time,
+            vehicle=vehicle
+        )
+
 
 @dataclass
 class Line:
@@ -98,13 +131,33 @@ class Line:
     barrier_free: bool
     line_id: int
     line_type: str
+    gate: str | None
     departures: list[Departure]
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any], monitor: Monitor) -> Line:
+    def from_dict(cls, data: dict[str, Any], location_data: dict[str, Any] | None = None) -> Line:
         """Create line from API response."""
+        gate = None
+        if isinstance(location_data, dict):
+            gate = location_data.get("properties", {}).get("gate")
+            
         departures_data = data.get("departures", {}).get("departure", [])
-        line = cls(
+        departures = []
+        
+        # For metro lines, use same vehicle info for all departure times
+        if data.get("type") == "ptMetro" and departures_data:
+            vehicle = Vehicle.from_dict(data)
+            departures = [
+                Departure.from_dict(dep_data, vehicle) 
+                for dep_data in departures_data
+            ]
+        else:
+            departures = [
+                Departure.from_dict(dep_data)
+                for dep_data in departures_data
+            ]
+                
+        return cls(
             name=data["name"],
             towards=data["towards"],
             direction=data["direction"],
@@ -112,11 +165,9 @@ class Line:
             barrier_free=data["barrierFree"],
             line_id=data["lineId"],
             line_type=data["type"],
-            departures=[]  # Initialize empty, will be filled after creation
+            gate=gate,
+            departures=departures
         )
-        # Create departures after line object exists
-        line.departures = [Departure.from_dict(d, monitor) for d in departures_data]
-        return line
 
 # Home Assistant Entities
 class Monitor:
@@ -156,74 +207,6 @@ class Monitor:
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "Monitor":
         """Create monitor from API response."""
-        monitor = cls(
-            location=StopLocation.from_dict(data["locationStop"]),
-            lines=[]  # Initialize empty
-        )
-        # Create lines after monitor exists
-        monitor.lines = [Line.from_dict(l, monitor) for l in data["lines"]]
-        return monitor
-
-
-class Departure(SensorEntity):
-    """Departure information sensor."""
-    
-    _attr_device_class = SensorDeviceClass.TIMESTAMP
-    _attr_has_entity_name = True
-    
-    def __init__(self, departure_time: DepartureTime, vehicle: Vehicle, monitor: Monitor) -> None:
-        """Initialize departure sensor."""
-        self.departure_time = departure_time
-        self.vehicle = vehicle
-        self.monitor = monitor
-        
-        self._attr_unique_id = f"departure_{monitor.location.rbl}_{vehicle.line_id}_{vehicle.direction}"
-        self._attr_name = f"{vehicle.name} to {vehicle.towards}"
-        self._attr_device_info = monitor.device_info
-
-    @property
-    def native_value(self) -> datetime:
-        """Return the actual departure time."""
-        return self.departure_time.time_real or self.departure_time.time_planned
-
-    @property
-    def available(self) -> bool:
-        """Return if entity is available."""
-        return True
-
-    @property
-    def extra_state_attributes(self) -> dict[str, Any]:
-        """Return additional state attributes."""
-        attrs = {
-            "planned_departure": self.departure_time.time_planned,
-            "real_departure": self.departure_time.time_real,
-            "countdown": self.departure_time.countdown,
-            "line": self.vehicle.name,
-            "destination": self.vehicle.towards,
-            "direction": self.vehicle.direction,
-            "platform": self.vehicle.platform,
-            "barrier_free": self.vehicle.barrier_free,
-            "vehicle_type": self.vehicle.vehicle_type,
-            "stop_name": self.monitor.location.title,
-            "municipality": self.monitor.location.municipality,
-        }
-        
-        if self.monitor.location.coordinates:
-            attrs.update({
-                ATTR_LATITUDE: self.monitor.location.coordinates.latitude,
-                ATTR_LONGITUDE: self.monitor.location.coordinates.longitude,
-            })
-        
-        return attrs
-
-    @classmethod
-    def from_dict(cls, data: dict[str, Any], monitor: Monitor) -> "Departure":
-        """Create departure from API response."""
-        departure_time = DepartureTime.from_dict(data["departureTime"])
-        vehicle = Vehicle.from_dict(data["vehicle"])
-        
-        return cls(
-            departure_time=departure_time,
-            vehicle=vehicle,
-            monitor=monitor
-        )
+        location = StopLocation.from_dict(data["locationStop"])
+        lines = [Line.from_dict(l, data.get("locationStop")) for l in data["lines"]]
+        return cls(location=location, lines=lines)

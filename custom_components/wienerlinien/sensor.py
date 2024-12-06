@@ -11,7 +11,6 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.const import ATTR_LATITUDE, ATTR_LONGITUDE
 
-
 from .const import DOMAIN, ENTITY_PREFIX, TIME_STR_FORMAT, DEFAULT_DEPARTURE_LIMIT
 from .entity import Line, Monitor
 
@@ -46,7 +45,7 @@ class LineEntity(CoordinatorEntity, SensorEntity):
 
     def _get_icon(self) -> str:
         """Get icon based on line type."""
-        if self.line.line_type.lower() == "ptbus":
+        if self.line.line_type.lower() == "ptbuscity":
             return "mdi:bus"
         elif self.line.line_type.lower() == "pttram":
             return "mdi:tram"
@@ -151,20 +150,22 @@ class LineEntity(CoordinatorEntity, SensorEntity):
         }
 
         try:
-            departures = self._filtered_departures[:self.departure_limit]
+            filtered_departures = self._filtered_departures[:self.departure_limit]
             attrs["departures"] = [
                 {
                     "location": self.monitor.location.title,
                     "line_name": self.line.name,
                     "line_icon": self._get_icon(),
                     "towards": dep.vehicle.towards,
+                    "platform": dep.vehicle.platform,
                     "planned_time": dep.departure_time.time_planned.strftime(TIME_STR_FORMAT),
                     "real_time": dep.departure_time.time_real.strftime(TIME_STR_FORMAT) if dep.departure_time.time_real else None,
                     "barrier_free": dep.vehicle.barrier_free,
+                    "vehicle_type": dep.vehicle.vehicle_type,
                     "realtime_supported": dep.vehicle.realtime_supported,
                     "traffic_jam": dep.vehicle.traffic_jam
                 }
-                for dep in departures
+                for dep in filtered_departures
             ]
         except Exception:
             pass
