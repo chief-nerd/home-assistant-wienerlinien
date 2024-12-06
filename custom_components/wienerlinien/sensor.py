@@ -4,7 +4,7 @@ from datetime import datetime
 import logging
 from typing import Any
 
-from homeassistant.components.sensor import SensorEntity
+from homeassistant.components.sensor import SensorEntity, callback
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -105,6 +105,35 @@ class LineEntity(CoordinatorEntity, SensorEntity):
             else:
                 return f"Arriving in {minutes} min"
         return None
+    
+    async def async_added_to_hass(self) -> None:
+        """When entity is added to hass."""
+        await super().async_added_to_hass()
+        _LOGGER.debug(
+            "Entity %s added to hass, coordinator interval: %s",
+            self._attr_unique_id,
+            self.coordinator.update_interval
+        )
+
+    @callback
+    def _handle_coordinator_update(self) -> None:
+        """Handle updated data from the coordinator."""
+        _LOGGER.debug(
+            "Coordinator update received for %s",
+            self._attr_unique_id
+        )
+        self._cached_departures = None
+        self.async_write_ha_state()
+
+    @property
+    def available(self) -> bool:
+        """Return if entity is available."""
+        return self.coordinator.last_update_success
+
+    @property
+    def should_poll(self) -> bool:
+        """No polling needed."""
+        return False
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
