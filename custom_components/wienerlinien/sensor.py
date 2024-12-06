@@ -9,6 +9,8 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
+from homeassistant.const import ATTR_LATITUDE, ATTR_LONGITUDE
+
 
 from .const import DOMAIN, ENTITY_PREFIX, TIME_STR_FORMAT, DEFAULT_DEPARTURE_LIMIT
 from .entity import Line, Monitor
@@ -143,6 +145,8 @@ class LineEntity(CoordinatorEntity, SensorEntity):
             "barrier_free": self.line.barrier_free,
             "line_type": self.line.line_type,
             "municipality": self.monitor.location.municipality,
+            ATTR_LATITUDE: self.monitor.location.coordinates.latitude,
+            ATTR_LONGITUDE: self.monitor.location.coordinates.longitude,
             "departures": []
         }
 
