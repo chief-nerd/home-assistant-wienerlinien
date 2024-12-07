@@ -1,0 +1,43 @@
+{
+  "config": {
+      "step": {
+          "user": {
+              "data": {
+                  "stops": "Enter RBL numbers (comma separated)",
+                  "departure_limit": "Number of departures to show",
+                  "scan_interval": "Update interval in seconds"
+              },
+              "description": "Enter one or more RBL numbers separated by commas (e.g. 2378,2359,2372)"
+          },
+          "reconfigure": {
+              "data": {
+                  "stops": "Enter RBL numbers (comma separated)",
+                  "departure_limit": "Number of departures to show",
+                  "scan_interval": "Update interval in seconds"
+              },
+              "description": "Modify your stop configuration. Enter one or more RBL numbers separated by commas (e.g. 2378,2359,2372)"
+          }
+      },
+      "error": {
+          "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+          "invalid_stops": "Invalid RBL numbers provided",
+          "unknown": "[%key:common::config_flow::error::unknown%]"
+      },
+      "abort": {
+          "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+          "reconfigure_successful": "Reconfiguration successful",
+          "entry_not_found": "Configuration entry not found"
+      }
+  },
+  "options": {
+      "step": {
+          "init": {
+              "data": {
+                  "departure_limit": "Number of departures to show",
+                  "scan_interval": "Update interval in seconds"
+              },
+              "description": "Adjust departure display and update settings"
+          }
+      }
+  }
+}

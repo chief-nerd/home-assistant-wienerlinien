@@ -178,11 +178,14 @@ async def async_setup_entry(
 ) -> None:
     """Set up Wiener Linien sensors based on a config entry."""
     coordinator = entry.runtime_data["coordinator"]
-    departure_limit = entry.data.get("departure_limit", DEFAULT_DEPARTURE_LIMIT)
+    
+    # Check options first, fall back to config data
+    departure_limit = entry.options.get(
+        "departure_limit",
+        entry.data.get("departure_limit", DEFAULT_DEPARTURE_LIMIT)
+    )
     
     entities = []
-    
-    # Track line/stop/direction combinations
     line_stop_directions = {}
     
     _LOGGER.debug("Processing %d monitors", len(coordinator.data))
@@ -232,15 +235,6 @@ async def async_setup_entry(
         for (direction, towards), direction_data in data['direction_data'].items():
             direction_text = "Outbound" if direction == "H" else "Inbound"
             safe_towards = towards.replace(",", "").replace(" ", "_").lower()
-            
-            _LOGGER.debug(
-                "Creating entity for line %s at %s (RBL: %s): direction %s towards %s",
-                data['line'].name,
-                data['monitor'].location.title,
-                rbl,
-                direction,
-                towards
-            )
             
             entities.append(
                 LineEntity(

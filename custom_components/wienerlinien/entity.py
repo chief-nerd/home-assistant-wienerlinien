@@ -210,3 +210,5 @@ class Monitor:
         location = StopLocation.from_dict(data["locationStop"])
         lines = [Line.from_dict(l, data.get("locationStop")) for l in data["lines"]]
         return cls(location=location, lines=lines)
+
+
