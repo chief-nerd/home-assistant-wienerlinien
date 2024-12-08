@@ -5,7 +5,7 @@ from typing import Any
 
 import voluptuous as vol
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, OptionsFlow
-from homeassistant.helpers import entity_registry as er
+from homeassistant.helpers import entity_registry as er, device_registry as dr
 from homeassistant.components.sensor import callback
 from homeassistant.data_entry_flow import FlowResult
 
@@ -71,17 +71,11 @@ class WienerLinienConfigFlow(ConfigFlow, domain=DOMAIN):
 
     async def async_step_reconfigure(self, user_input: dict[str, Any] | None = None) -> FlowResult:
         """Handle reconfiguration."""
+        entry = self._get_reconfigure_entry()
         errors = {}
-
-        # Get the entry in a safe way
-        try:
-            entry = self._get_reconfigure_entry()
-        except ValueError:
-            return self.async_abort(reason="entry_not_found")
         
         if user_input is not None:
             try:
-                # Get old and new stops for comparison
                 old_stops = set(int(s.strip()) for s in entry.data[CONF_STOPS].split(","))
                 new_stops = set(int(s.strip()) for s in user_input[CONF_STOPS].split(","))
                 
@@ -91,26 +85,36 @@ class WienerLinienConfigFlow(ConfigFlow, domain=DOMAIN):
                 errors["base"] = "invalid_stops"
 
             if not errors:
-                # Find removed stops
                 removed_stops = old_stops - new_stops
                 
                 if removed_stops:
-                    # Get entity registry
+                    # Get both registries
                     ent_reg = er.async_get(self.hass)
+                    dev_reg = dr.async_get(self.hass)
                     
-                    # Create list of entities to remove first
+                    # Remove entities
                     entities_to_remove = [
                         entity.entity_id
                         for entity in list(ent_reg.entities.values())
                         if (entity.config_entry_id == entry.entry_id and
                             any(f"_{stop}_" in entity.unique_id for stop in removed_stops))
                     ]
-                    
-                    # Remove entities
                     for entity_id in entities_to_remove:
                         ent_reg.async_remove(entity_id)
+                    
+                    # Remove devices
+                    devices_to_remove = [
+                        device.id
+                        for device in dev_reg.devices.values()
+                        if (device.config_entries == {entry.entry_id} and
+                            any(f"wienerlinien_stop_{stop}" in ident[1] 
+                                for ident in device.identifiers
+                                for stop in removed_stops))
+                    ]
+                    for device_id in devices_to_remove:
+                        dev_reg.async_remove_device(device_id)
 
-                # Update entry with new data
+                # Update entry
                 self.hass.config_entries.async_update_entry(
                     entry,
                     data={
@@ -120,7 +124,6 @@ class WienerLinienConfigFlow(ConfigFlow, domain=DOMAIN):
                     }
                 )
                 
-                # Reload entry to create new entities
                 await self.hass.config_entries.async_reload(entry.entry_id)
                 return self.async_abort(reason="reconfigure_successful")
 

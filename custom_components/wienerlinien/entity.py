@@ -179,7 +179,7 @@ class Monitor:
         self.lines = lines
         self.device_info = DeviceInfo(
             identifiers={(DOMAIN, f"wienerlinien_stop_{location.rbl}")},
-            name=f"Wiener Linien {location.title}",
+            name=f"{location.title} - {self.create_name()}",
             manufacturer="Wiener Linien",
             model="Public Transport Stop",
             sw_version="1.0",
@@ -203,6 +203,14 @@ class Monitor:
                     next_dep.departure_time.time_real or next_dep.departure_time.time_planned
                 ))
         return sorted(departures, key=lambda x: x[1])
+    
+    def create_name(self) -> str:
+        """Create a name for this entity."""
+        line_names: str = ", ".join(self.available_lines)
+        for line in self.lines:
+            if line.departures:
+                return f"{line_names} towards {line.towards}"
+    
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "Monitor":
@@ -210,5 +218,3 @@ class Monitor:
         location = StopLocation.from_dict(data["locationStop"])
         lines = [Line.from_dict(l, data.get("locationStop")) for l in data["lines"]]
         return cls(location=location, lines=lines)
-
-
