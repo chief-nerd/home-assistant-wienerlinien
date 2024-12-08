@@ -2,6 +2,10 @@
 
 This integration was inspired originally by [home-assistant-wienerlinien](https://github.com/tofuSCHNITZEL/home-assistant-wienerlinien).
 
+I have not submitted this integration to HACS, therefore you need to add the repo manually to HACS repos.
+
+I'm still debating whether to submit to HACS or not.
+
 There are several differences here.
 
 This updated integration is ONLY configurable via the UI.
