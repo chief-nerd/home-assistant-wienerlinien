@@ -7,7 +7,7 @@
                   "departure_limit": "Number of departures to show",
                   "scan_interval": "Update interval in seconds"
               },
-              "description": "Enter one or more RBL numbers separated by commas (e.g. 2378,2359,2372)"
+              "description": "Enter one or more RBL numbers separated by commas (e.g. 2378,2359,2372). The numbers can be found at the following URL: https://till.mabe.at/rbl/"
           },
           "reconfigure": {
               "data": {

@@ -25,7 +25,7 @@
                     "scan_interval": "Update interval in seconds",
                     "stops": "Enter RBL numbers (comma separated)"
                 },
-                "description": "Enter one or more RBL numbers separated by commas (e.g. 2378,2359,2372)"
+                "description": "Enter one or more RBL numbers separated by commas (e.g. 2378,2359,2372). The numbers can be found at the following URL: https://till.mabe.at/rbl/"
             }
         }
     },
