@@ -146,6 +146,12 @@ class Line:
         
         # For metro lines, use same vehicle info for all departure times
         if data.get("type") == "ptMetro" and departures_data:
+            # Handle both linienId and lineId fields
+            line_id = data.get("linienId", data.get("lineId"))
+            if line_id is None:
+                _LOGGER.error("No line ID found in data: %s", data)
+                raise ValueError("Missing line ID")
+                
             vehicle = Vehicle.from_dict(data)
             departures = [
                 Departure.from_dict(dep_data, vehicle) 
@@ -157,13 +163,19 @@ class Line:
                 for dep_data in departures_data
             ]
                 
+        # Handle both linienId and lineId fields
+        line_id = data.get("linienId", data.get("lineId"))
+        if line_id is None:
+            _LOGGER.error("No line ID found in data: %s", data)
+            raise ValueError("Missing line ID")
+                
         return cls(
             name=data["name"],
             towards=data["towards"],
             direction=data["direction"],
             platform=data["platform"],
             barrier_free=data["barrierFree"],
-            line_id=data["lineId"],
+            line_id=line_id,
             line_type=data["type"],
             gate=gate,
             departures=departures
