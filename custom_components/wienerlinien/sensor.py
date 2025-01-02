@@ -171,6 +171,61 @@ class LineEntity(CoordinatorEntity, SensorEntity):
             pass
         return attrs
 
+class TrafficInfoSensor(CoordinatorEntity, SensorEntity):
+    """Traffic information sensor."""
+    
+    def __init__(self, coordinator, line_name: str, line_id: str) -> None:
+        """Initialize the traffic info sensor."""
+        super().__init__(coordinator)
+        self.line_name = line_name
+        self.line_id = line_id
+        
+        self._attr_unique_id = f"{ENTITY_PREFIX}traffic_info_{line_id}"
+        self._attr_name = f"Traffic Info Line {line_name}"
+        self._attr_icon = "mdi:alert-circle"
+
+    @property
+    def native_value(self) -> str | None:
+        """Return the current traffic info status."""
+        if not self.coordinator.data:
+            return None
+            
+        traffic_infos = [
+            info for info in self.coordinator.data.get("trafficInfos", [])
+            if self.line_name in info.get("relatedLines", [])
+        ]
+        
+        if not traffic_infos:
+            return "Normal Service"
+            
+        return f"{len(traffic_infos)} Disruption(s)"
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        """Return additional state attributes."""
+        attrs = {
+            "disruptions": []
+        }
+        
+        if self.coordinator.data:
+            traffic_infos = [
+                info for info in self.coordinator.data.get("trafficInfos", [])
+                if self.line_name in info.get("relatedLines", [])
+            ]
+            
+            attrs["disruptions"] = [
+                {
+                    "title": info.get("title"),
+                    "description": info.get("description"),
+                    "priority": info.get("priority"),
+                    "start_time": info.get("time", {}).get("start"),
+                    "end_time": info.get("time", {}).get("end")
+                }
+                for info in traffic_infos
+            ]
+            
+        return attrs
+
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: ConfigEntry,
@@ -178,6 +233,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up Wiener Linien sensors based on a config entry."""
     coordinator = entry.runtime_data["coordinator"]
+    traffic_coordinator = entry.runtime_data["traffic_coordinator"]
     
     # Check options first, fall back to config data
     departure_limit = entry.options.get(
@@ -249,5 +305,21 @@ async def async_setup_entry(
                 )
             )
 
+    # Add traffic info sensors for each unique line
+    seen_lines = set()
+    traffic_entities = []
+    
+    for monitor in coordinator.data:
+        for line in monitor.lines:
+            if line.line_id not in seen_lines:
+                seen_lines.add(line.line_id)
+                traffic_entities.append(
+                    TrafficInfoSensor(
+                        coordinator=traffic_coordinator,
+                        line_name=line.name,
+                        line_id=line.line_id
+                    )
+                )
+
     _LOGGER.debug("Created %d total entities", len(entities))
-    async_add_entities(entities)
+    async_add_entities(entities + traffic_entities)
